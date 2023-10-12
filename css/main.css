@@ -1,0 +1,261 @@
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  background-image: url(../img/background.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  max-width: 1300px;
+}
+
+.aside {
+  height: 400px;
+}
+
+.main {
+  height: 400px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.task-title {
+  font-weight: 400;
+  padding-top: 5px;
+}
+
+.gray {
+  color: #BDBDBD;
+}
+
+.task-title--done {
+  text-decoration: line-through;
+  color: #CDCDCD;
+}
+
+.task-item__buttons {
+  display: flex;
+  column-gap: 5px;
+}
+
+.notify-holder {
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.empty-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.empty-list__title {
+  font-size: 28px;
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+
+.empty-list__icon {
+  color: #42BE2A;
+  font-size: 32px;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #486686;
+  border-color: #7c92a9;
+}
+
+.btn-action {
+  background-color: #e0e5ea;
+  padding: 8px 10px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  transition: opacity 0.2s ease-in;
+  opacity: 0.5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-action:hover {
+  background-color: #e0e5ea;
+  opacity: 1;
+}
+
+.btn-action img {
+  pointer-events: none;
+}
+
+.none {
+  display: none !important;
+}
+
+.float-right {
+  float: right;
+}
+
+.copyright {
+  margin-top: 40px;
+  font-size: 14px;
+  color: gray;
+  text-align: center;
+  margin-bottom: 30px;
+  /* position: absolute; */
+  /* bottom: 30px; */
+  /* left: 0; */
+  /* right: 0; */
+}
+
+
+/* Календарь*/
+
+.toDo-wrapp {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-wrapp {
+  width: 250px;
+  margin: 20px;
+}
+
+.card-wrapp {
+  width: 850px;
+}
+
+#calendar2 {
+  width: 100%;
+  font: monospace;
+  line-height: 1.2em;
+  font-size: 15px;
+  text-align: center;
+}
+
+#calendar2 thead tr:last-child {
+  font-size: small;
+  color: rgb(52, 26, 26);
+}
+
+#calendar2 thead tr:nth-child(1) td:nth-child(2) {
+  color: rgb(50, 50, 50);
+}
+
+#calendar2 thead tr:nth-child(1) td:nth-child(1):hover, #calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
+  cursor: pointer;
+}
+
+#calendar2 tbody td {
+  color: rgb(26 48 66);
+}
+
+#calendar2 tbody td:nth-child(n+6), #calendar2 .holiday {
+  color: rgb(180, 66, 5);
+}
+
+#calendar2 tbody td.today {
+  background: rgb(133 193 234);
+  color: #fff;
+}
+
+/* clock */
+
+.clock {
+  width: 220px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(https://user-images.githubusercontent.com/42720361/80282419-a293a400-8711-11ea-81c7-1c44e2980db2.png);
+  background-size: cover;
+  border: 16px solid #505381;
+  border-radius: 50%;
+  box-shadow: 0 -15px 15px rgba(35, 6, 6, 0.05),
+    inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+    0 15px 15px rgba(0, 0, 0, 0.3),
+    inset 0 15px 15px rgba(0, 0, 0, 0.3);
+  margin-bottom: 50px;
+}
+
+.clock:before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 10000;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec {
+  position: absolute;
+}
+
+.clock .hour, .hr {
+  width: 160px;
+  height: 160px;
+}
+
+.clock .min, .mn {
+  width: 190px;
+  height: 190px;
+}
+
+.clock .sec, .sc {
+  width: 230px;
+  height: 230px;
+}
+
+.hr, .mn, .sc {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.hr:before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 80px;
+  background: #5a4d71;
+  z-index: 10;
+  border-radius: 6px 6px 0 0;
+}
+
+.mn:before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 90px;
+  background: #5a4d71;
+  z-index: 11;
+  border-radius: 6px 6px 0 0;
+}
+
+.sc:before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background: #040304;
+  z-index: 12;
+  border-radius: 6px 6px 0 0;
+}
